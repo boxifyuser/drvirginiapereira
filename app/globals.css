@@ -314,6 +314,58 @@ h1 em, h2 em, .about-placeholder-title em { color: var(--gold); font-family: var
   .quick-card, .quick-card:first-child, .quick-card:last-child { min-height: 320px; padding-inline: 10px; }
   .quick-card h3 { font-size: 14px; }
 }
+.logo-frame { position: relative; display: block; overflow: hidden; }
+.logo-frame-header { width: 158px; background: #e4ded2; }
+.logo-frame-footer { width: 236px; background: #36011b; }
+.logo-frame-about { width: min(88%, 440px); background: #36011b; }
+.site-header { background: #e4ded2; }
+.footer-brand-block > p { margin-left: 0; }
+.about-visual.has-logo { background: #36011b; }
+.about-visual.has-logo::before { display: none; }
+.about-visual.has-logo .about-caption { color: rgba(255, 255, 255, 0.72); }
+.eyebrow { text-transform: uppercase; }
+.skip-link { position: absolute; left: 16px; top: -48px; z-index: 40; padding: 10px 14px; background: var(--wine); color: var(--white); }
+.skip-link:focus { top: 12px; }
+.contact-grid { align-items: start; }
+.channel-list { margin: 0; padding: 0; list-style: none; }
+.channel-list li { border-bottom: 1px solid rgba(255,255,255,.2); }
+.contact-form { display: grid; gap: 14px; }
+.contact-card-label { display: block; margin-bottom: 18px; }
+.about-facts { margin: 0; padding: 0; list-style: none; }
+.about-facts li { display: inline-flex; align-items: center; }
+.contact-card .field { display: grid; gap: 6px; }
+.contact-card .field label, .contact-card .check label { color: rgba(255,255,255,.82); font-size: 11px; }
+.contact-card .field input, .contact-card .field select, .contact-card .field textarea { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid rgba(255,255,255,.28); background: transparent; color: var(--white); font-size: 13px; }
+.contact-card .field textarea { min-height: 120px; resize: vertical; }
+.contact-card .field select option { color: var(--ink); }
+.contact-card #message-hint, .contact-card .form-notice, .contact-card .form-success { margin: 0; color: rgba(255,255,255,.62); font-size: 11px; line-height: 1.6; }
+.contact-card .field p, .contact-card .check p { margin: 0; color: #e7d3b5; font-size: 11px; line-height: 1.5; }
+.contact-card .check { display: grid; grid-template-columns: 18px 1fr; gap: 8px; align-items: start; color: rgba(255,255,255,.82); font-size: 12px; }
+.contact-card .check input { width: 16px; height: 16px; margin-top: 2px; }
+.contact-card .check a { color: #e7d3b5; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; }
+.contact-card .button-dark { width: 100%; background: var(--sand); color: var(--wine); }
+.contact-card .button-dark:hover { background: var(--white); }
+.hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+.about-visual.has-photo { background: var(--wine); }
+.about-visual.has-photo::before, .about-visual.has-photo .about-orbit, .about-visual.has-photo .about-placeholder-title { display: none; }
+.about-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.policy-page { min-height: auto; padding-top: 56px; }
+.cookie-banner { position: fixed; z-index: 30; right: 0; bottom: 0; left: 0; background: var(--ink); color: var(--white); }
+.cookie-inner { width: min(1160px, calc(100% - 40px)); display: grid; gap: 14px; margin-inline: auto; padding: 16px 0 calc(16px + env(safe-area-inset-bottom)); }
+.cookie-banner p { margin: 0; color: rgba(255,255,255,.82); font-size: 12px; line-height: 1.6; }
+#cookie-title { margin-bottom: 4px; color: var(--white); font-size: 13px; }
+.cookie-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.cookie-actions button { min-height: 40px; padding: 0 14px; border: 1px solid rgba(255,255,255,.35); background: transparent; color: var(--white); cursor: pointer; }
+.cookie-actions button:last-child { border-color: var(--gold); background: var(--wine); }
+body.has-cookie .floating-contact { bottom: calc(7.5rem + env(safe-area-inset-bottom)); }
+@media (max-width: 720px) {
+  .logo-frame-header { width: 132px; }
+  .logo-frame-footer { width: min(220px, 78vw); }
+}
+@media (min-width: 1040px) {
+  .logo-frame-header { width: 176px; }
+  .cookie-inner { grid-template-columns: 1fr auto; align-items: center; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
